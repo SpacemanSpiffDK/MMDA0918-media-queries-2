@@ -1,195 +1,196 @@
 * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
 }
 
 .site-width {
-  width: 960px;
-  margin: 0 auto;
+    width: 960px;
+    margin: 0 auto;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #05c46b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #05c46b;
 }
 
 header nav {
-  padding: 15px 0;
+    padding: 15px 0;
 }
 
 header nav ul {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 header nav li+li {
-  margin-left: 15px;
+    margin-left: 15px;
 }
 
 header nav li,
 header nav li a {
-  display: inline-block;
+    display: inline-block;
 }
 
 header nav li a {
-  padding: 15px 40px;
-  background-color: #3c40c6;
-  color: #fff;
-  text-decoration: none;
-  opacity: .7;
-  font-size: 20px;
-  border-radius: 5px;
+    padding: 15px 40px;
+    background-color: #3c40c6;
+    color: #fff;
+    text-decoration: none;
+    opacity: .7;
+    font-size: 20px;
+    border-radius: 5px;
 }
 
 header nav li a:hover,
 header nav li a.active {
-  opacity: 1;
+    opacity: 1;
 }
 
 main {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  background-image: url(../images/tile.png);
-  background-repeat: repeat;
-  padding-left: 15px;
-  padding-right: 15px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-image: url(../images/tile.png);
+    background-repeat: repeat;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 main p {
-  line-height: 1.5;
-  margin: 2rem 0;
+    line-height: 1.5;
+    margin: 2rem 0;
 }
 
 main h1 {
-  margin: 0;
-  font-size: 2rem;
+    margin: 0;
+    font-size: 2rem;
 }
 
 main a,
 main a:active,
 main a:visited {
-  color: #000;
+    color: #000;
 }
 
 main a:hover {
-  color: #888;
+    color: #888;
 }
 
 main p.intro {
-  margin-top: 0;
-  font-weight: 600;
+    margin-top: 0;
+    font-weight: 600;
 }
 
 .content-image {
-  max-width: 100%;
-  display: inline-block;
-  margin: 20px 0;
+    max-width: 100%;
+    display: inline-block;
+    margin: 20px 0;
 }
 
 @media (max-width: 1000px) {
-  header nav {
-    padding: 15px;
-  }
+    header nav {
+        padding: 15px;
+    }
 
-  .site-width {
-    width: calc(100% - 30px);
-  }
+    .site-width {
+        width: calc(100% - 30px);
+    }
 
-  header nav {
-    padding: 15px 0;
-  }
+    header nav {
+        padding: 15px 0;
+    }
 
-  header nav li+li {
-    margin-left: 15px;
-  }
+    header nav li+li {
+        margin-left: 15px;
+    }
 
-  header nav li a {
-    padding: 1vw 3vw;
-  }
+    header nav li a {
+        padding: 1vw 3vw;
+    }
 
-  main {
-    background-image: url(../images/tile-2.png);
-    padding-top: calc(60px + 2.5vw);
-  }
+    main {
+        background-image: url(../images/tile-2.png);
+        padding-top: calc(60px + 2.5vw);
+    }
 }
 
 @media (min-width: 650px) {
-  .col-space {
-    column-count: 2;
-    margin-bottom: 20px;
-  }
+    .col-space {
+        -webkit-column-count: 2;
+                column-count: 2;
+        margin-bottom: 20px;
+    }
 
-  .col-space p:first-child {
-    margin-top: 0;
-  }
+    .col-space p:first-child {
+        margin-top: 0;
+    }
 }
 
 /* mobile */
 @media (max-width: 649px) {
-  .site-width {
-    width: 90vw;
-  }
+    body {
+        font-size: 3.5vw;
+    }
 
-  body {
-    font-size: 3.5vw;
-  }
+    main h1 {
+        font-size: 7vw;
+    }
 
-  main h1 {
-    font-size: 7vw;
-  }
+    header nav {
+        padding: 4vw 0;
+    }
 
-  header nav {
-    padding: 4vw 0;
-  }
+    header nav li+li {
+        margin-left: 5vw;
+    }
 
-  header nav li+li {
-    margin-left: 5vw;
-  }
+    header nav li a {
+        width: 26vw;
+        padding: 4vw;
+        font-size: 4vw;
+    }
 
-  header nav li a {
-    width: 26vw;
-    padding: 4vw;
-    font-size: 4vw;
-  }
+    .site-width {
+        width: 90vw;
+    }
 }
 
 /* Orientation  */
 @media (orientation: landscape) {
-  body {
-    background-color: #3ff;
-  }
+    body {
+        background-color: #3ff;
+    }
 }
 
 @media (orientation: portrait) {
-  body {
-    background-color: #f3f;
-  }
+    body {
+        background-color: #f3f;
+    }
 }
 
 /* Print  */
 @media print {
-  header {
-    display: none;
-  }
+    header {
+        display: none;
+    }
 
-  main {
-    background-image: none;
-    background-color: white;
-  }
+    main {
+        background-image: none;
+        background-color: white;
+    }
 
-  .content-image {
-    max-width: 50%;
-    display: inline-block;
-    margin: 20px 0;
-  }
+    .content-image {
+        max-width: 50%;
+        display: inline-block;
+        margin: 20px 0;
+    }
 }
