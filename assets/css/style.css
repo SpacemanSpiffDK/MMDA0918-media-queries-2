@@ -7,6 +7,7 @@ body {
   font-family: sans-serif;
   padding: 0;
   margin: 0;
+  font-size: 1rem;
 }
 
 .site-width {
@@ -19,7 +20,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #000;
+  background-color: #05c46b;
 }
 
 header nav {
@@ -31,7 +32,7 @@ header nav ul {
   margin: 0;
 }
 
-header nav li + li {
+header nav li+li {
   margin-left: 15px;
 }
 
@@ -42,12 +43,12 @@ header nav li a {
 
 header nav li a {
   padding: 15px 40px;
-  background-color: #888;
+  background-color: #3c40c6;
   color: #fff;
   text-decoration: none;
-  opacity: .5;
-  transition: all .2s ease-out;
+  opacity: .7;
   font-size: 20px;
+  border-radius: 5px;
 }
 
 header nav li a:hover,
@@ -58,15 +59,20 @@ header nav li a.active {
 main {
   padding-top: 100px;
   padding-bottom: 50px;
+  background-image: url(../images/tile.png);
+  background-repeat: repeat;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 main p {
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 2rem 0;
 }
 
 main h1 {
   margin: 0;
+  font-size: 2rem;
 }
 
 main a,
@@ -103,7 +109,7 @@ main p.intro {
     padding: 15px 0;
   }
 
-  header nav li + li {
+  header nav li+li {
     margin-left: 15px;
   }
 
@@ -112,6 +118,7 @@ main p.intro {
   }
 
   main {
+    background-image: url(../images/tile-2.png);
     padding-top: calc(60px + 2.5vw);
   }
 }
@@ -124,5 +131,65 @@ main p.intro {
 
   .col-space p:first-child {
     margin-top: 0;
+  }
+}
+
+/* mobile */
+@media (max-width: 649px) {
+  .site-width {
+    width: 90vw;
+  }
+
+  body {
+    font-size: 3.5vw;
+  }
+
+  main h1 {
+    font-size: 7vw;
+  }
+
+  header nav {
+    padding: 4vw 0;
+  }
+
+  header nav li+li {
+    margin-left: 5vw;
+  }
+
+  header nav li a {
+    width: 26vw;
+    padding: 4vw;
+    font-size: 4vw;
+  }
+}
+
+/* Orientation  */
+@media (orientation: landscape) {
+  body {
+    background-color: #3ff;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    background-color: #f3f;
+  }
+}
+
+/* Print  */
+@media print {
+  header {
+    display: none;
+  }
+
+  main {
+    background-image: none;
+    background-color: white;
+  }
+
+  .content-image {
+    max-width: 50%;
+    display: inline-block;
+    margin: 20px 0;
   }
 }
