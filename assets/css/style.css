@@ -1,6 +1,6 @@
 * {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -126,7 +126,7 @@ main p.intro {
 @media (min-width: 650px) {
     .col-space {
         -webkit-column-count: 2;
-                column-count: 2;
+        column-count: 2;
         margin-bottom: 20px;
     }
 
@@ -179,18 +179,13 @@ main p.intro {
 
 /* Print  */
 @media print {
-    header {
+    .print-hide {
         display: none;
     }
-
-    main {
-        background-image: none;
-        background-color: white;
-    }
+}
 
     .content-image {
         max-width: 50%;
         display: inline-block;
         margin: 20px 0;
     }
-}
