@@ -182,10 +182,9 @@ main p.intro {
     .print-hide {
         display: none;
     }
-}
-
     .content-image {
         max-width: 50%;
         display: inline-block;
         margin: 20px 0;
     }
+}
