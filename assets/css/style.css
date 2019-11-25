@@ -1,20 +1,25 @@
+
+/* set box-sizing model to avoid border/padding size issues */
 * {
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+            box-sizing: border-box;
 }
 
+/* Set font-family and font-size for all sizes, reset margin/padding to 0 */
 body {
     font-family: sans-serif;
+    font-size: 1rem;
     padding: 0;
     margin: 0;
-    font-size: 1rem;
 }
 
+/* class for controlling the width of the site "content" */
 .site-width {
     width: 960px;
     margin: 0 auto;
 }
 
+/* fixed header */
 header {
     position: fixed;
     top: 0;
@@ -32,15 +37,18 @@ header nav ul {
     margin: 0;
 }
 
+/* Set a left margin for all nav li that has a previous sibling li */
 header nav li+li {
     margin-left: 15px;
 }
 
+/* enable padding on nav li and nav li a  */
 header nav li,
 header nav li a {
     display: inline-block;
 }
 
+/* style those navigation items */
 header nav li a {
     padding: 15px 40px;
     background-color: #3c40c6;
@@ -51,11 +59,13 @@ header nav li a {
     border-radius: 5px;
 }
 
+/* change the navigation links on hover */
 header nav li a:hover,
 header nav li a.active {
     opacity: 1;
 }
 
+/* main content - "normal" look */
 main {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -75,6 +85,7 @@ main h1 {
     font-size: 2rem;
 }
 
+/* set styles for any links in <main> */
 main a,
 main a:active,
 main a:visited {
@@ -90,17 +101,21 @@ main p.intro {
     font-weight: 600;
 }
 
+/* set max-width for image to avoid it spilling over the right side of the parent if the image is too large, set margins */
 .content-image {
     max-width: 100%;
     display: inline-block;
     margin: 20px 0;
 }
 
+/* style for screens that are 1000px OR LESS */
 @media (max-width: 1000px) {
     header nav {
         padding: 15px;
     }
 
+    /* here we change the site-width class that is used to control the with of the content on the page */
+    /* using calc we can do math and mix units (%, px, rem, em, vw, vh etc.) */
     .site-width {
         width: calc(100% - 30px);
     }
@@ -123,6 +138,7 @@ main p.intro {
     }
 }
 
+/* style for screens that are 641px OR LARGER */
 @media (min-width: 641px) {
     .col-space {
         -webkit-column-count: 2;
@@ -135,7 +151,7 @@ main p.intro {
     }
 }
 
-/* mobile */
+/* style for mobile */
 @media (max-width: 640px) {
     body {
         font-size: 3.5vw;
